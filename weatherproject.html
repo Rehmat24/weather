@@ -1,0 +1,45 @@
+
+<html>
+
+<head>
+        <title>Document</title>
+        <link rel="stylesheet" href="weatherproject.css">
+</head>
+<body>
+    
+    <form id="form">
+    <input type="text" id="input" placeholder="Enter a city name"/>
+    <button>Submit</button>
+</form>
+<p id="cities"></p>
+</body>
+<script>
+       const form=document.getElementById('form');
+        const input=document.getElementById('input');
+        const cities=document.getElementById('cities')
+        const apikey="d6b59b6e449b4f561d2d984eb2e44676"
+            form.addEventListener('submit',e=>{
+                e.preventDefault();
+                cities.textContent=""
+                const inputValue=input.value;
+                const url=`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apikey}&units=metric`
+                fetch(url)
+                .then(response=>response.json())
+                .then(data=>{
+                    const {main,name}=data;
+                    const para=document.createElement("p");
+                    para.classList.add("city");
+                    const out=`<p>City:${name}</p>
+                                    <div>Temperature is:${main.temp}<sup>0</sup>C</div>`
+                    para.innerHTML=out;
+                    cities.appendChild(para);
+                                    
+                }).catch(()=>{
+                    alert("please Enter your valid city name")
+
+                })
+                form.reset();
+            })
+
+</script>
+</html>

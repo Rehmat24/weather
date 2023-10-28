@@ -1,0 +1,71 @@
+/* Reset some default styles to ensure consistent rendering */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply a background color to the body */
+  body {
+    background-color: #f0f0f0;
+    background-image: url(https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1600,h_1200/https://assets.designhill.com/design-blog/wp-content/uploads/2017/08/Colors.png);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+
+  
+  
+  /* Style the form for better readability */
+  #form {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #0fce0f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the input and button for responsiveness */
+  #input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #363434;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the city info */
+  .city {
+    background-color: #aef2ed;
+    border: 1px solid #671212;
+    padding: 10px;
+    width: 50vw;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Make city info responsive */
+  @media (max-width: 768px) {
+    #form {
+      max-width: 90%;
+    }
+  }
+  
+
